@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice & Rule of Law Advocacy | 捍卫法治与正义</title>
+    <style>
+        /* 基础样式与法律精神的配色：深蓝、纯白、金色点缀 */
+        :root {
+            --primary-navy: #002868; /* 代表庄重与法律 */
+            --accent-gold: #BF9B30; /* 代表权威与正义 */
+            --text-dark: #333333;
+            --bg-light: #F9F9FB;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* 顶部导航与语言切换 */
+        header {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .language-selector select {
+            padding: 5px 10px;
+            font-size: 1rem;
+            border: 1px solid var(--accent-gold);
+            background-color: white;
+            color: var(--primary-navy);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* 英雄区 (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(0, 40, 104, 0.85), rgba(0, 40, 104, 0.85)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 主体内容区 */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        h2, h3 {
+            color: var(--primary-navy);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .quote {
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+            background: #fdfdfd;
+            padding: 15px;
+        }
+
+        /* 按钮与行动呼吁 */
+        .cta-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #a38226;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span>⚖️</span>
+            <span id="nav-title">Justice Alliance</span>
+        </div>
+        <div class="language-selector">
+            <select id="lang-switch" onchange="changeLanguage()">
+                <option value="zh">中文 (Chinese)</option>
+                <option value="en">English (英文)</option>
+                <option value="pt">Português (葡萄牙语)</option>
+                <option value="ja">日本語 (日语)</option>
+                <option value="de">Deutsch (德语)</option>
+                <option value="fr">Français (法语)</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 id="hero-title">捍卫血汗钱与司法正义</h1>
+        <p id="hero-subtitle">致全体普通投资者与拒绝沉默的人们的公开倡议书</p>
+    </div>
+
+    <div class="container">
+        <div id="main-content" class="content-section">
+            <!-- 内容由 JS 动态注入 -->
+        </div>
+
+        <div class="cta-section">
+            <button class="cta-btn" id="cta-button">加入模拟法院行动</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footer-text">© 2026 投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。</p>
+    </footer>
+
+    <script>
+        // 多语言内容字典
+        const translations = {
+            zh: {
+                navTitle: "正义联盟",
+                heroTitle: "捍卫血汗钱与司法正义",
+                heroSubtitle: "致全体投资者的公开倡议书",
+                content: `
+                    <h3>致所有身处困境、拒绝沉默的投资者们：</h3>
+                    <p>今天，我们正面临着前所未有的困境与司法危机。数以万计的普通人，为了寻求资产的安全，将毕生辛勤工作积攒下来的积蓄投入了西方市场。</p>
+                    <p>然而，满怀对美国法治与自由市场的信任，许多人换来的却是资产的查封与扣押。面对明确属于独立第三方的资金以及投资人的自述申诉，相关的司法程序显得迟缓而冷漠。数万名无辜的普通投资者被强行裹挟其中，原本平静的生活和程序正义正受到严重冲击。</p>
+                    <div class="quote">
+                        “华工帮助铺设了连接我们大西洋海岸与太平洋海岸的铁路轨道。”<br>
+                        —— 前总统唐纳德·特朗普
+                    </div>
+                    <p>250年前，华工是美国建国与崛起过程中最朴实、最伟大的建设者。今天，我们几万名投资者正在见证现代司法系统深处的运作。我们希望和善良的美国人民站在一起，共同维护司法体制的纯洁与公正。</p>
+                    
+                    <h3>我们的核心倡议：</h3>
+                    <h4>一、 动员真实受害人：从“被动等待”走向“主动捍卫”</h4>
+                    <p>我们号召所有真实的投资者站出来。通过合法的申诉、公开声明和联合行动，向法庭、向公众大声证明：我们是独立的第三方资产所有者，这是我们合法的财产。</p>
+                    
+                    <h4>二、 联合法学院组建“模拟法院” (Moot Court)</h4>
+                    <p>我们倡议广泛联系全球各级法学院与法律学者。基于现有的公开材料和法庭文件，在学术层面组建“模拟法院”。我们要探讨：基于美国司法的常识和宪法精神，如何通过合法的法律框架，拿回属于普通人的资产？</p>
+                `,
+                ctaButton: "加入模拟法院行动",
+                footerText: "© 2026 投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。"
+            },
+            en: {
+                navTitle: "Justice Alliance",
+                heroTitle: "Defending Property Rights & Judicial Justice",
+                heroSubtitle: "An Open Appeal to All Investors and Those Who Refuse to Stay Silent",
+                content: `
+                    <h3>To all investors in distress who refuse to remain silent:</h3>
+                    <p>Today, we are facing an unprecedented predicament and a judicial crisis. Tens of thousands of ordinary people, seeking asset security, invested their life savings into Western markets.</p>
+                    <p>However, armed with trust in the American rule of law and free markets, many have faced the seizure and forfeiture of their assets. Faced with funds that clearly belong to independent third parties and the affidavits of investors, the judicial process has appeared slow and indifferent. Tens of thousands of innocent, ordinary investors have been forcibly swept up, severely impacting their peaceful lives and procedural justice.</p>
+                    <div class="quote">
+                        "Chinese workers helped lay the railroad tracks that connected our Atlantic coast to the Pacific."<br>
+                        — Former President Donald Trump
+                    </div>
+                    <p>250 years ago, Chinese workers were among the most humble and greatest builders of the United States. Today, tens of thousands of investors are witnessing the inner workings of the modern justice system. We hope to stand with the good American people to jointly safeguard the purity and fairness of the judicial system.</p>
+                    
+                    <h3>Our Core Initiatives:</h3>
+                    <h4>1. Mobilizing Real Victims: From "Passive Waiting" to "Active Defense"</h4>
+                    <p>We call on all genuine investors to step forward. Through lawful appeals, public statements, and joint actions, we must prove to the courts and the public loudly and clearly: We are independent third-party asset owners, and this is our lawful property.</p>
+                    
+                    <h4>2. Collaborating with Law Schools to Form a "Moot Court"</h4>
+                    <p>We propose reaching out to law schools and legal scholars worldwide. Based on existing public materials and court documents, we aim to establish an academic "Moot Court." We will explore: Based on the common sense of American jurisprudence and the spirit of the Constitution, how can we recover the assets belonging to ordinary people through a lawful legal framework?</p>
+                `,
+                ctaButton: "Join the Moot Court Initiative",
+                footerText: "© 2026 Investors Legal Defense & Justice Alliance. Defending lawful rights without retreat."
+            },
+            pt: {
+                navTitle: "Aliança por Justiça",
+                heroTitle: "Defendendo Direitos de Propriedade e Justiça Judicial",
+                heroSubtitle: "Um Apelo Aberto a Todos os Investidores",
+                content: `<h3>Tradução em andamento...</h3><p>O conteúdo em português estará disponível em breve. Por favor, consulte a versão em inglês ou chinês.</p>`,
+                ctaButton: "Junte-se à Iniciativa",
+                footerText: "© 2026 Aliança por Justiça."
+            },
+            ja: {
+                navTitle: "正義同盟",
+                heroTitle: "財産権と司法の正義を守る",
+                heroSubtitle: "すべての投資家への公開アピール",
+                content: `<h3>翻訳中...</h3><p>日本語のコンテンツはまもなく公開されます。英語または中国語版をご覧ください。</p>`,
+                ctaButton: "模擬法廷イニシアチブに参加する",
+                footerText: "© 2026 投資家法的防衛と正義の同盟."
+            },
+            de: {
+                navTitle: "Allianz für Gerechtigkeit",
+                heroTitle: "Verteidigung von Eigentumsrechten",
+                heroSubtitle: "Ein offener Appell an alle Investoren",
+                content: `<h3>Übersetzung in Arbeit...</h3><p>Der deutsche Inhalt wird in Kürze verfügbar sein.</p>`,
+                ctaButton: "Treten Sie der Initiative bei",
+                footerText: "© 2026 Allianz für Gerechtigkeit."
+            },
+            fr: {
+                navTitle: "Alliance pour la Justice",
+                heroTitle: "Défense des Droits de Propriété",
+                heroSubtitle: "Un Appel Ouvert à Tous les Investisseurs",
+                content: `<h3>Traduction en cours...</h3><p>Le contenu en français sera bientôt disponible.</p>`,
+                ctaButton: "Rejoindre l'Initiative",
+                footerText: "© 2026 Alliance pour la Justice."
+            }
+        };
+
+        // 切换语言函数
+        function changeLanguage() {
+            const lang = document.getElementById("lang-switch").value;
+            const data = translations[lang];
+
+            // 更新DOM元素
+            document.title = data.heroTitle;
+            document.getElementById("nav-title").innerText = data.navTitle;
+            document.getElementById("hero-title").innerText = data.heroTitle;
+            document.getElementById("hero-subtitle").innerText = data.heroSubtitle;
+            document.getElementById("main-content").innerHTML = data.content;
+            document.getElementById("cta-button").innerText = data.ctaButton;
+            document.getElementById("footer-text").innerText = data.footerText;
+        }
+
+        // 页面加载时初始化默认语言（中文）
+        window.onload = function() {
+            changeLanguage();
+        };
+    </script>
+</body>
+</html>
