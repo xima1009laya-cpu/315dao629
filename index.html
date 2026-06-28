@@ -361,4 +361,137 @@
 </body>
 </html>
 
-```
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捍卫法治与正义 | Justice & Rule of Law Advocacy</title>
+    <style>
+        :root {
+            --primary-navy: #002868; 
+            --accent-gold: #BF9B30; 
+            --text-dark: #333333;
+            --bg-light: #F9F9FB;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Microsoft YaHei', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-selector select {
+            padding: 8px 15px;
+            border: 1px solid var(--accent-gold);
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 40, 104, 0.9), rgba(0, 40, 104, 0.8));
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 6px solid var(--accent-gold);
+        }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        .content-card { background: white; padding: 50px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+
+        h2, h3 { color: var(--primary-navy); margin-top: 30px; }
+        .signature { text-align: right; margin-top: 50px; font-weight: bold; color: var(--primary-navy); }
+        
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">⚖️ 捍卫正义联盟</div>
+    <div class="language-selector">
+        <select id="lang-switch" onchange="updateLanguage()">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+</header>
+
+<div class="hero">
+    <h1 id="hero-title">捍卫血汗钱与司法正义</h1>
+    <p id="hero-subtitle">致全体“G系列项目”投资人的公开倡议暨法律抗辩书</p>
+</div>
+
+<div class="container">
+    <div class="content-card" id="main-content">
+        <!-- 内容由JS动态切换 -->
+    </div>
+    <button class="cta-btn" id="cta-button">捍卫合法权益，绝不退缩</button>
+</div>
+
+<script>
+    const content = {
+        zh: {
+            heroTitle: "捍卫血汗钱与司法正义",
+            heroSubtitle: "致全体“G系列项目”投资人的公开倡议暨法律抗辩书",
+            body: `
+                <h3>致全体“中国金融难民”与财产权捍卫者：</h3>
+                <p>今天，我们正面临着一场前所未有的司法危机。在 <i>United States v. Ho Wan Kwok, et al.</i> (23-CR-118) 一案中，广大独立投资者的财产权正遭到严重忽视[span_0](start_span)[span_0](end_span)。</p>
+                <h3>一、 “金融难民”的觉醒与“J6事件”的警示</h3>
+                <p>我们是寻求资产安全的普通中国人，却被强行贴上标签。我们与那些“J6美国人”一样，正在失去平静生活与程序正义[span_1](start_span)[span_1](end_span)。若这批中国人的合法资产得不到美国宪法保护，每一个普通美国人的钱袋子也将岌岌可危。</p>
+                <h3>二、 历史的隐喻：从华工到司法法治的捍卫者</h3>
+                <p>第45任及47任总统特朗普先生曾赞颂华工是“缔造美国版图的建设者”。今天，我们正以理性和坚韧，见证美国司法系统的漏洞，共同清除官僚与黑暗。</p>
+                <h3>三、 关键法律争议与事实抗辩</h3>
+                <p>辩方已明确指出本案的程序瑕疵，包括：<b>Fatico 听证会未决</b>、<b>Brady 证据开示不到位</b>、<b>Rule 17(c) 传票执行受阻</b>[span_2](start_span)[span_2](end_span)。同时，数据显示 1,286 名声明人中，<b>1,223 人明确否认受害</b>[span_3](start_span)[span_3](end_span)。更有证据显示，多名投资者遭到境外高压胁迫，被迫作出虚假陈述[span_4](start_span)[span_4](end_span)。</p>
+            `,
+            cta: "捍卫合法权益，绝不退缩"
+        },
+        en: {
+            heroTitle: "Defending Hard-Earned Money & Judicial Justice",
+            heroSubtitle: "An Open Appeal & Legal Defense Statement for G-Series Investors",
+            body: `
+                <h3>To all Chinese Financial Refugees and Defenders of Property Rights:</h3>
+                <p>Today, we face an unprecedented judicial crisis. In <i>United States v. Ho Wan Kwok, et al.</i> (23-CR-118), the property rights of independent investors are being disregarded[span_5](start_span)[span_5](end_span).</p>
+                <h3>I. Awakening of "Financial Refugees" & The J6 Warning</h3>
+                <p>We are ordinary Chinese seeking asset security. Like the "J6 Americans," we are losing our peaceful lives and procedural justice[span_6](start_span)[span_6](end_span). If the lawful assets of these ordinary Chinese are not protected by the U.S. Constitution, every ordinary American's wealth is at risk.</p>
+                <h3>II. Historical Metaphor: From Railroad Workers to Defenders of Rule of Law</h3>
+                <p>President Donald Trump (45th & 47th) once praised Chinese workers as the "builders who connected America." Today, with reason and resilience, we are witnessing the loopholes in the U.S. judicial system, striving to root out bureaucracy and darkness.</p>
+                <h3>III. Legal Disputes & Factual Defense</h3>
+                <p>The defense has highlighted procedural flaws, including: <b>pending Fatico hearings</b>, <b>failure to disclose Brady materials</b>, and <b>unresolved Rule 17(c) subpoenas</b>[span_7](start_span)[span_7](end_span). Data shows that out of 1,286 declarants, <b>1,223 expressly disclaimed victimization</b>[span_8](start_span)[span_8](end_span). Evidence also reveals that many investors were coerced by foreign forces to provide false statements[span_9](start_span)[span_9](end_span).</p>
+            `,
+            cta: "Defend lawful rights, never retreat"
+        }
+    };
+
+    function updateLanguage() {
+        const lang = document.getElementById("lang-switch").value;
+        document.getElementById("hero-title").innerText = content[lang].heroTitle;
+        document.getElementById("hero-subtitle").innerText = content[lang].heroSubtitle;
+        document.getElementById("main-content").innerHTML = content[lang].body;
+        document.getElementById("cta-button").innerText = content[lang].cta;
+    }
+    window.onload = updateLanguage;
+</script>
+</body>
+</html>
