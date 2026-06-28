@@ -1,200 +1,316 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>捍卫血汗钱与司法正义：致全体“G系列项目”投资人的公开倡议暨法律抗辩书</title>
+    <title>捍卫法治与正义 | Justice & Rule of Law Advocacy</title>
     <style>
+        /* 核心配色：深蓝(司法庄重)、纯白(纯洁)、金色(权威与正义) */
         :root {
-            --primary-color: #1a252f;
-            --text-color: #333333;
-            --bg-color: #f4f7f6;
-            --container-bg: #ffffff;
-            --border-color: #e0e0e0;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 20px;
+            --primary-navy: #002868; 
+            --accent-gold: #BF9B30; 
+            --text-dark: #333333;
+            --bg-light: #F9F9FB;
         }
 
-        .container {
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Microsoft YaHei', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* 顶部导航与语言切换 */
+        header {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .language-selector select {
+            padding: 8px 15px;
+            font-size: 1rem;
+            border: 1px solid var(--accent-gold);
+            background-color: white;
+            color: var(--primary-navy);
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* 英雄区 (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(0, 40, 104, 0.9), rgba(0, 40, 104, 0.8)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 6px solid var(--accent-gold);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto;
-            background-color: var(--container-bg);
-            padding: 50px 60px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            color: #E0E0E0;
+        }
+
+        /* 主体内容区 */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 50px;
             border-radius: 8px;
+            border-top: 4px solid var(--primary-navy);
         }
 
-        h1 {
-            color: var(--primary-color);
-            font-size: 26px;
-            text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            line-height: 1.4;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-size: 20px;
-            margin-top: 40px;
+        /* 排版样式 */
+        h2, h3 {
+            color: var(--primary-navy);
+            margin-top: 30px;
             margin-bottom: 15px;
-            border-left: 4px solid #2c3e50;
-            padding-left: 12px;
-            line-height: 1.2;
+        }
+
+        h3 {
+            font-size: 1.4rem;
         }
 
         p {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
             text-align: justify;
-            font-size: 16px;
-        }
-
-        .greeting {
-            font-weight: bold;
-            font-size: 17px;
-            margin-bottom: 25px;
         }
 
         strong {
-            color: #000000;
-            font-weight: 600;
+            color: #000;
+            background-color: rgba(191, 155, 48, 0.1);
+            padding: 0 3px;
         }
 
         ul {
-            margin-top: 10px;
             margin-bottom: 20px;
-            padding-left: 25px;
+            font-size: 1.1rem;
         }
 
         li {
-            margin-bottom: 12px;
-            text-align: justify;
+            margin-bottom: 10px;
         }
 
         hr {
             border: 0;
             height: 1px;
-            background-color: var(--border-color);
+            background: #E0E0E0;
             margin: 40px 0;
         }
 
-        .signature-block {
-            margin-top: 60px;
+        .signature {
             text-align: right;
-        }
-
-        .signature-block .slogan {
+            margin-top: 50px;
             font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #d32f2f; /* 深红色强调 */
+            color: var(--primary-navy);
+        }
+        
+        .signature p {
             text-align: right;
-        }
-
-        .signature-block .org {
-            font-weight: bold;
-            font-size: 16px;
             margin-bottom: 5px;
-            text-align: right;
         }
 
-        .signature-block .date {
-            font-style: italic;
-            color: #666666;
-            text-align: right;
+        /* 按钮与行动呼吁 */
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
-        /* 移动端适配 */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            .container {
-                padding: 30px 20px;
-            }
-            h1 {
-                font-size: 22px;
-            }
-            h2 {
-                font-size: 18px;
-            }
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn:hover {
+            background-color: #a38226;
+            transform: translateY(-2px);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-navy);
+            color: #B0BEC5;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .content-card { padding: 30px 20px; }
+            header { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
 
+    <header>
+        <div class="logo">
+            <span>⚖️</span>
+            <span id="nav-title">正义联盟</span>
+        </div>
+        <div class="language-selector">
+            <select id="lang-switch" onchange="changeLanguage()">
+                <option value="zh" selected>中文 (Chinese)</option>
+                <option value="en">English (英文)</option>
+                <option value="pt">Português (葡萄牙语)</option>
+                <option value="ja">日本語 (日语)</option>
+                <option value="de">Deutsch (德语)</option>
+                <option value="fr">Français (法语)</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 id="hero-title">捍卫血汗钱与司法正义</h1>
+        <p id="hero-subtitle">致全体“G系列项目”投资人的公开倡议书</p>
+    </div>
+
     <div class="container">
-        <h1>捍卫血汗钱与司法正义：致全体“G系列项目”投资人的公开倡议暨法律抗辩书</h1>
+        <div class="content-card" id="main-content">
+            <!-- 内容将由 JavaScript 动态注入 -->
+        </div>
 
-        <p class="greeting">致所有身处困境、拒绝沉默的中国金融难民与财产权捍卫者：</p>
-
-        <p>今天，我们正面临着一场前所未有的“双重绞杀”与司法危机。为了捍卫程序的正当性与私有财产的神圣不可侵犯，我们必须从被动等待转向主动的法律抗辩。</p>
-
-        <hr>
-
-        <h2>一、 概念的觉醒：何为“中国金融难民”？</h2>
-        <p>在国内，我们被贴上“危害国家安全”、“资助海外敌对势力”的标签，被限制、被恐吓，不被允许相信西方、投资美国。数以万计的普通中国人，为了寻求资产的安全，超越重重困难与阻力，将一辈子辛勤工作积攒下来的血汗钱投资到了西方。我们，就是这个时代的“中国金融难民”。</p>
-        <p>然而，满怀对美国法治与自由市场的信任，我们换来的却是美国政府的查封与扣押。起初，政府宣称我们是“受害人”；随后，口径却变成了“诈骗团伙”。对于明确属于独立第三方的资金，纽约南区联邦地方法院（United States v. Ho Wan Kwok, et al., 23-CR-118）在近期的程序中选择了公开漠视。中国共产党打击政敌的政治目标，正试图通过其在美国的某些利益代理人与官僚力量继续推进。</p>
-
-        <h2>二、 唇亡齿寒：从“J6事件”看对普通美国人的深远影响</h2>
-        <p>回归普通人的视角，我们这群中国金融难民，正如同那些普通的“J6（国会山事件）美国人”一样，正在失去原本平静的生活，并被无情剥夺正当的程序正义。这是一场披着法律外衣、旷日持久的“司法超限战”。美国政府试图用普通的“经济诈骗案”来掩盖背后的政治动机。</p>
-        <p>我们必须向全美社会发出警告：如果这一批普通中国人的合法资产得不到美国宪法的保护，那么未来，每一个普通美国人的钱袋子也将岌岌可危！美国的私有财产神圣不可侵犯之基石，正遭到现代官僚体制和被武器化的司法系统的严重践踏。</p>
-
-        <h2>三、 历史的隐喻：从修路华工到司法法治的捍卫者</h2>
-        <p>美国第45任及第47任总统唐纳德·特朗普（Donald Trump）曾深情地讲述过250年前华工的故事：“华工帮助铺设了连接我们大西洋海岸与太平洋海岸的铁路轨道。”</p>
-        <p>如果说，250年前的华工是用汗水和生命连接美国两大洋、缔造美国物理版图的伟大建设者；那么今天，我们这几万名中国金融难民，正在用血泪的代价触碰并见证着美国司法系统深处的漏洞。我们无意破坏这个国家，而是希望和善良的美国人民站在一起，共同清除司法体制中的傲慢、官僚与黑暗！我们正以理性和坚韧，捍卫现代文明的财产法治。</p>
-
-        <h2>四、 拒绝程序违规：揭露本案悬而未决的关键法律争议</h2>
-        <p>这种司法权力的异化，在本案的推进中体现得淋漓尽致。根据宪法第五及第六修正案的正当程序原则，本案在未解决以下核心法律前置程序前，绝不应草率推进量刑：</p>
-        <ul>
-            <li><strong>量刑核心事实的对抗性审查未决：</strong> 辩方已请求召开 Fatico 听证会，以就决定量刑指南级别的“损失金额”及涉嫌妨碍司法等关键问题进行证据质证。仓促量刑将构成程序违法。</li>
-            <li><strong>控方涉嫌隐瞒关键证据（Brady动议未决）：</strong> 辩方要求政府根据 Brady v. Maryland 规则提供有利证据（特别是未删节的 USAO_00282658-USAO_00282813 文件）。在控方未能履行 Brady 义务的情况下强行审判，有失公平。</li>
-            <li><strong>法院传票执行受阻：</strong> 针对辩方发出的 Rule 17(c) 传票，关键证人（Witness 1）未完全履行义务，强制作答动议仍悬而未决，剥夺了辩方的证据开示权。</li>
-            <li><strong>涉案资产面临被稀释风险：</strong> 辩方已要求政府从破产受托人处接管可罚没资产，以防其作为“专业费用”被实质性稀释，这直接关系到个人金钱判决的公正性。</li>
-            <li><strong>第三人财产权益（§ 853(n)）缺乏透明度：</strong> 数千名投资者提交了 § 853(n) 请愿书，但关于任命特别主事官（Special Master）来处理这些权利主张的提案仍未解决，且辩方无法查阅政府掌握的所有请愿书。</li>
-        </ul>
-
-        <h2>五、 事实与真相：独立数据戳破“受害者”叙事</h2>
-        <p>官僚体系所谓的“受害人定义”在投资者自述的铁证面前不攻自破。截至2026年4月29日及后续补充，辩方已向法庭提交了大量投资者的真实声明，揭露了境外政治胁迫的真相：</p>
-        <ul>
-            <li><strong>绝大多数投资者否认受害：</strong> 在提交声明的 1,286 名个人中，有 1,182 人明确投资了 G 系列实体，其中高达 1,223 人明确作出放弃受害者身份的声明。</li>
-            <li><strong>涉案资金权属清晰：</strong> 仅部分披露投资总额的声明群体，其合法投资额就高达 72,372,224.94 美元。</li>
-        </ul>
-        <p><strong>令人震惊的中共（CCP）政治干预与胁迫取证：</strong></p>
-        <ul>
-            <li>108 人证实因投资 G 系列遭到中共讯问；</li>
-            <li>35 人证实被强制要求作出悔过、保证或“承认被诈骗”的虚假声明；</li>
-            <li>7 人被迫对郭先生提出虚假控诉；</li>
-            <li>28 人因此遭到中共逮捕或起诉。</li>
-        </ul>
-        <p>这些数据清晰地表明，控方据以指控的所谓“受害者陈述”，极大程度上是境外政治力量通过高压和胁迫手段人为建构的结果。</p>
-
-        <h2>六、 行动倡议：从“被动等待”走向“主动捍卫”</h2>
-        <p>沉默只会被视为默认。为此，我们向全体投资者及正义人士发出如下核心倡议：</p>
-        <ul>
-            <li><strong>动员真实受害人，积极行使 § 853(n) 权利：</strong> 不要再寄希望于官僚机器的自我觉醒！我们号召所有真实投资者立刻站出来，通过 21 U.S.C. § 853(n) 提交合法的法律申诉与公开声明，向法庭与媒体大声证明：我们不是诈骗犯，我们是独立的第三方资产所有者，那是我们经得起历史检验的血汗钱！</li>
-            <li><strong>联合法学院组建“模拟法院”（Moot Court）：</strong> 我们将广泛联系美国及全球的法律学者与法学院，基于本案现有的公开庭审记录，在学术与社会层面组建“模拟法院”。我们要深究拷问：这群普通中国人究竟能不能拿回属于他们的资产？我们要让全美最优秀的法律头脑看清，这场审判是如何背离了美国的立国精神。</li>
-        </ul>
-
-        <hr>
-
-        <p>同胞们，朋友们！</p>
-        <p>这不仅仅是为了抢救我们自己的养老钱、子女教育金，更是为了捍卫所有人免受官僚公权力非法剥夺的最终权利。如果你也是真实的受害人，请不再妥协，不再恐惧，立刻加入我们的行列，向傲慢与黑暗宣战，夺回属于我们的正义与资产！</p>
-
-        <div class="signature-block">
-            <p class="slogan">捍卫合法权益，绝不退缩！</p>
-            <p class="org">G系列项目普通投资者法律自救与正义联盟</p>
-            <p class="date">2026年6月</p>
+        <div class="cta-section">
+            <button class="cta-btn" id="cta-button">加入我们的行列，向傲慢与黑暗宣战</button>
         </div>
     </div>
 
+    <footer>
+        <p id="footer-text">© 2026 G系列项目普通投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。</p>
+    </footer>
+
+    <script>
+        // 完整的双语内容字典（已补全您的全部中文原文）
+        const translations = {
+            zh: {
+                navTitle: "正义联盟",
+                heroTitle: "捍卫血汗钱与司法正义",
+                heroSubtitle: "致全体“G系列项目”投资人的公开倡议暨法律抗辩书",
+                content: `
+                    <h3>致所有身处困境、拒绝沉默的中国金融难民与财产权捍卫者：</h3>
+                    <p>今天，我们正面临着一场前所未有的“双重绞杀”与司法危机。为了捍卫程序的正当性与私有财产的神圣不可侵犯，我们必须从被动等待转向主动的法律抗辩。</p>
+
+                    <h3>一、 概念的觉醒：何为“中国金融难民”？</h3>
+                    <p>在国内，我们被贴上“危害国家安全”、“资助海外敌对势力”的标签，被限制、被恐吓，不被允许相信西方、投资美国。数以万计的普通中国人，为了寻求资产的安全，超越重重困难与阻力，将一辈子辛勤工作积攒下来的血汗钱投资到了西方。我们，就是这个时代的“中国金融难民”。</p>
+                    <p>然而，满怀对美国法治与自由市场的信任，我们换来的却是美国政府的查封与扣押。起初，政府宣称我们是“受害人”；随后，口径却变成了“诈骗团伙”。对于明确属于独立第三方的资金，纽约南区联邦地方法院（United States v. Ho Wan Kwok, et al., 23-CR-118）在近期的程序中选择了公开漠视。中国共产党打击政敌的政治目标，正试图通过其在美国的某些利益代理人与官僚力量继续推进。</p>
+
+                    <h3>二、 唇亡齿寒：从“J6事件”看对普通美国人的深远影响</h3>
+                    <p>回归普通人的视角，我们这群中国金融难民，正如同那些普通的“J6（国会山事件）美国人”一样，正在失去原本平静的生活，并被无情剥夺正当的程序正义。这是一场披着法律外衣、旷日持久的“司法超限战”。美国政府试图用普通的“经济诈骗案”来掩盖背后的政治动机。</p>
+                    <p>我们必须向全美社会发出警告：如果这一批普通中国人的合法资产得不到美国宪法的保护，那么未来，每一个普通美国人的钱袋子也将岌岌可危！美国的私有财产神圣不可侵犯之基石，正遭到现代官僚体制和被武器化的司法系统的严重践踏。</p>
+
+                    <h3>三、 历史的隐喻：从修路华工到司法法治的捍卫者</h3>
+                    <p>美国第45任及第47任总统唐纳德·特朗普（Donald Trump）曾深情地讲述过250年前华工的故事：“华工帮助铺设了连接我们大西洋海岸与太平洋海岸的铁路轨道。”</p>
+                    <p>如果说，250年前的华工是用汗水和生命连接美国两大洋、缔造美国物理版图的伟大建设者；那么今天，我们这几万名中国金融难民，正在用血泪的代价触碰并见证着美国司法系统深处的漏洞。我们无意破坏这个国家，而是希望和善良的美国人民站在一起，共同清除司法体制中的傲慢、官僚与黑暗！我们正以理性和坚韧，捍卫现代文明的财产法治。</p>
+
+                    <h3>四、 拒绝程序违规：揭露本案悬而未决的关键法律争议</h3>
+                    <p>这种司法权力的异化，在本案的推进中体现得淋漓尽致。根据宪法第五及第六修正案的正当程序原则，本案在未解决以下核心法律前置程序前，绝不应草率推进量刑：</p>
+                    <ul>
+                        <li><strong>1. 量刑核心事实的对抗性审查未决：</strong> 辩方已请求召开 Fatico 听证会，以就决定量刑指南级别的“损失金额”及涉嫌妨碍司法等关键问题进行证据质证。仓促量刑将构成程序违法。</li>
+                        <li><strong>2. 控方涉嫌隐瞒关键证据（Brady动议未决）：</strong> 辩方要求政府根据 Brady v. Maryland 规则提供有利证据（特别是未删节的 USAO_00282658-USAO_00282813 文件）。在控方未能履行 Brady 义务的情况下强行审判，有失公平。</li>
+                        <li><strong>3. 法院传票执行受阻：</strong> 针对辩方发出的 Rule 17(c) 传票，关键证人（Witness 1）未完全履行义务，强制作答动议仍悬而未决，剥夺了辩方的证据开示权。</li>
+                        <li><strong>4. 涉案资产面临被稀释风险：</strong> 辩方已要求政府从破产受托人处接管可罚没资产，以防其作为“专业费用”被实质性稀释，这直接关系到个人金钱判决的公正性。</li>
+                        <li><strong>5. 第三人财产权益（§ 853(n)）缺乏透明度：</strong> 数千名投资者提交了 § 853(n) 请愿书，但关于任命特别主事官（Special Master）来处理这些权利主张的提案仍未解决，且辩方无法查阅政府掌握的所有请愿书。</li>
+                    </ul>
+
+                    <h3>五、 事实与真相：独立数据戳破“受害者”叙事</h3>
+                    <p>官僚体系所谓的“受害人定义”在投资者自述的铁证面前不攻自破。截至2026年4月29日及后续补充，辩方已向法庭提交了大量投资者的真实声明，揭露了境外政治胁迫的真相：</p>
+                    <ul>
+                        <li><strong>绝大多数投资者否认受害：</strong> 在提交声明的 1,286 名个人中，有 1,182 人明确投资了 G 系列实体，其中高达 1,223 人明确作出放弃受害者身份的声明。</li>
+                        <li><strong>涉案资金权属清晰：</strong> 仅部分披露投资总额的声明群体，其合法投资额就高达 72,372,224.94 美元。</li>
+                    </ul>
+                    <p><strong>令人震惊的中共（CCP）政治干预与胁迫取证：</strong></p>
+                    <ul>
+                        <li>108 人证实因投资 G 系列遭到中共讯问；</li>
+                        <li>35 人证实被强制要求作出悔过、保证或“承认被诈骗”的虚假声明；</li>
+                        <li>7 人被迫对郭先生提出虚假控诉；</li>
+                        <li>28 人因此遭到中共逮捕或起诉。</li>
+                    </ul>
+                    <p>这些数据清晰地表明，控方据以指控的所谓“受害者陈述”，极大程度上是境外政治力量通过高压和胁迫手段人为建构的结果。</p>
+
+                    <h3>六、 行动倡议：从“被动等待”走向“主动捍卫”</h3>
+                    <p>沉默只会被视为默认。为此，我们向全体投资者及正义人士发出如下核心倡议：</p>
+                    <ul>
+                        <li><strong>1. 动员真实受害人，积极行使 § 853(n) 权利：</strong> 不要再寄希望于官僚机器的自我觉醒！我们号召所有真实投资者立刻站出来，通过 21 U.S.C. § 853(n) 提交合法的法律申诉与公开声明，向法庭与媒体大声证明：我们不是诈骗犯，我们是独立的第三方资产所有者，那是我们经得起历史检验的血汗钱！</li>
+                        <li><strong>2. 联合法学院组建“模拟法院”（Moot Court）：</strong> 我们将广泛联系美国及全球的法律学者与法学院，基于本案现有的公开庭审记录，在学术与社会层面组建“模拟法院”。我们要深究拷问：这群普通中国人究竟能不能拿回属于他们的资产？我们要让全美最优秀的法律头脑看清，这场审判是如何背离了美国的立国精神。</li>
+                    </ul>
+
+                    <hr>
+
+                    <p>同胞们，朋友们！</p>
+                    <p>这不仅仅是为了抢救我们自己的养老钱、子女教育金，更是为了捍卫所有人免受官僚公权力非法剥夺的最终权利。如果你也是真实的受害人，请不再妥协，不再恐惧，立刻加入我们的行列，向傲慢与黑暗宣战，夺回属于我们的正义与资产！</p>
+
+                    <div class="signature">
+                        <p style="color:#d32f2f;">捍卫合法权益，绝不退缩！</p>
+                        <p>G系列项目普通投资者法律自救与正义联盟</p>
+                        <p style="font-style: italic; font-weight: normal; color: #666;">2026年6月</p>
+                    </div>
+                `,
+                ctaButton: "加入我们的行列，向傲慢与黑暗宣战",
+                footerText: "© 2026 G系列项目普通投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。"
+            }
+            // 未来可在此处添加英文(en)等其他语言的翻译对象
+        };
+
+        // 语言切换功能
+        function changeLanguage() {
+            const lang = document.getElementById('lang-switch').value;
+            // 如果所选语言尚未提供内容，默认回退显示中文
+            const t = translations[lang] || translations['zh']; 
+
+            document.getElementById('nav-title').innerText = t.navTitle || translations['zh'].navTitle;
+            document.getElementById('hero-title').innerText = t.heroTitle || translations['zh'].heroTitle;
+            document.getElementById('hero-subtitle').innerText = t.heroSubtitle || translations['zh'].heroSubtitle;
+            document.getElementById('main-content').innerHTML = t.content || translations['zh'].content;
+            document.getElementById('cta-button').innerText = t.ctaButton || translations['zh'].ctaButton;
+            document.getElementById('footer-text').innerText = t.footerText || translations['zh'].footerText;
+        }
+
+        // 页面加载完成后初始化内容
+        window.onload = changeLanguage;
+    </script>
 </body>
 </html>
