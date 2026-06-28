@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justice & Rule of Law Advocacy | 捍卫法治与正义</title>
+    <title>捍卫法治与正义 | Justice & Rule of Law Advocacy</title>
     <style>
-        /* 基础样式与法律精神的配色：深蓝、纯白、金色点缀 */
+        /* 核心配色：深蓝(司法庄重)、纯白(纯洁)、金色(权威与正义) */
         :root {
-            --primary-navy: #002868; /* 代表庄重与法律 */
-            --accent-gold: #BF9B30; /* 代表权威与正义 */
+            --primary-navy: #002868; 
+            --accent-gold: #BF9B30; 
             --text-dark: #333333;
             --bg-light: #F9F9FB;
         }
 
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
+            font-family: 'Georgia', 'Times New Roman', 'Microsoft YaHei', serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
             background-color: var(--bg-light);
@@ -26,10 +26,11 @@
         header {
             background-color: var(--primary-navy);
             color: white;
-            padding: 15px 20px;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .logo {
@@ -42,108 +43,140 @@
         }
 
         .language-selector select {
-            padding: 5px 10px;
+            padding: 8px 15px;
             font-size: 1rem;
             border: 1px solid var(--accent-gold);
             background-color: white;
             color: var(--primary-navy);
             border-radius: 4px;
             cursor: pointer;
+            font-weight: bold;
         }
 
         /* 英雄区 (Hero Section) */
         .hero {
-            background: linear-gradient(rgba(0, 40, 104, 0.85), rgba(0, 40, 104, 0.85)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(rgba(0, 40, 104, 0.9), rgba(0, 40, 104, 0.8)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
             color: white;
             text-align: center;
             padding: 80px 20px;
-            border-bottom: 5px solid var(--accent-gold);
+            border-bottom: 6px solid var(--accent-gold);
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: normal;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto;
+            color: #E0E0E0;
         }
 
         /* 主体内容区 */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
-            background: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            padding: 40px;
-            border-radius: 8px;
         }
 
+        .content-card {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 50px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-navy);
+        }
+
+        /* 排版样式 */
         h2, h3 {
             color: var(--primary-navy);
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
         }
 
-        .content-section {
-            margin-bottom: 30px;
-            font-family: 'Arial', sans-serif;
-            font-size: 1.05rem;
-            color: #444;
+        h3 {
+            font-size: 1.4rem;
         }
 
-        .quote {
-            border-left: 4px solid var(--accent-gold);
-            padding-left: 15px;
-            font-style: italic;
-            color: #555;
-            margin: 20px 0;
-            background: #fdfdfd;
-            padding: 15px;
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        strong {
+            color: #000;
+            background-color: rgba(191, 155, 48, 0.1);
+            padding: 0 3px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #E0E0E0;
+            margin: 40px 0;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 50px;
+            font-weight: bold;
+            color: var(--primary-navy);
         }
 
         /* 按钮与行动呼吁 */
         .cta-section {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         .cta-btn {
             background-color: var(--accent-gold);
             color: white;
             text-decoration: none;
-            padding: 15px 30px;
-            font-size: 1.2rem;
+            padding: 18px 40px;
+            font-size: 1.3rem;
             font-weight: bold;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
             display: inline-block;
             border: none;
             cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
 
         .cta-btn:hover {
             background-color: #a38226;
+            transform: translateY(-2px);
         }
 
         /* 页脚 */
         footer {
             background-color: var(--primary-navy);
-            color: white;
+            color: #B0BEC5;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9rem;
+            padding: 30px 20px;
+            font-size: 0.95rem;
         }
 
         /* 响应式设计 */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .container { padding: 20px; }
+            .hero h1 { font-size: 2.2rem; }
+            .content-card { padding: 30px 20px; }
+            header { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
@@ -152,11 +185,11 @@
     <header>
         <div class="logo">
             <span>⚖️</span>
-            <span id="nav-title">Justice Alliance</span>
+            <span id="nav-title">正义联盟</span>
         </div>
         <div class="language-selector">
             <select id="lang-switch" onchange="changeLanguage()">
-                <option value="zh">中文 (Chinese)</option>
+                <option value="zh" selected>中文 (Chinese)</option>
                 <option value="en">English (英文)</option>
                 <option value="pt">Português (葡萄牙语)</option>
                 <option value="ja">日本語 (日语)</option>
@@ -168,104 +201,138 @@
 
     <div class="hero">
         <h1 id="hero-title">捍卫血汗钱与司法正义</h1>
-        <p id="hero-subtitle">致全体普通投资者与拒绝沉默的人们的公开倡议书</p>
+        <p id="hero-subtitle">致全体“G系列项目”投资人的公开倡议书</p>
     </div>
 
     <div class="container">
-        <div id="main-content" class="content-section">
-            <!-- 内容由 JS 动态注入 -->
+        <div class="content-card" id="main-content">
+            <!-- 内容将由 JavaScript 动态注入 -->
         </div>
 
         <div class="cta-section">
-            <button class="cta-btn" id="cta-button">加入模拟法院行动</button>
+            <button class="cta-btn" id="cta-button">加入我们的行列，向傲慢与黑暗宣战</button>
         </div>
     </div>
 
     <footer>
-        <p id="footer-text">© 2026 投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。</p>
+        <p id="footer-text">© 2026 G系列项目普通投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。</p>
     </footer>
 
     <script>
-        // 多语言内容字典
+        // 完整的双语内容字典（包含您的全部中文原文和对应的英文全文翻译）
         const translations = {
             zh: {
                 navTitle: "正义联盟",
                 heroTitle: "捍卫血汗钱与司法正义",
-                heroSubtitle: "致全体投资者的公开倡议书",
+                heroSubtitle: "致全体“G系列项目”投资人的公开倡议书",
                 content: `
-                    <h3>致所有身处困境、拒绝沉默的投资者们：</h3>
-                    <p>今天，我们正面临着前所未有的困境与司法危机。数以万计的普通人，为了寻求资产的安全，将毕生辛勤工作积攒下来的积蓄投入了西方市场。</p>
-                    <p>然而，满怀对美国法治与自由市场的信任，许多人换来的却是资产的查封与扣押。面对明确属于独立第三方的资金以及投资人的自述申诉，相关的司法程序显得迟缓而冷漠。数万名无辜的普通投资者被强行裹挟其中，原本平静的生活和程序正义正受到严重冲击。</p>
-                    <div class="quote">
-                        “华工帮助铺设了连接我们大西洋海岸与太平洋海岸的铁路轨道。”<br>
-                        —— 前总统唐纳德·特朗普
+                    <h3>致所有身处困境、拒绝沉默的中国金融难民与投资者们：</h3>
+                    <p>今天，我们正面临着一场前所未有的“双重绞杀”与司法危机。</p>
+                    <p>在国内，我们被贴上“危害国家安全”、“资助海外敌对势力”的标签，被限制、被恐吓，不被允许相信西方、投资美国。数以万计的普通中国人，为了寻求资产的安全，超越重重困难与阻力，将一辈子辛勤工作积攒下来的血汗钱投资到了西方。</p>
+                    <p>然而，满怀对美国法治与自由市场的信任，我们换来的却是美国政府的查封与扣押。起初，政府宣称：“你们受骗了，你们是受害人，资金由我们来暂时保管。”可随后，口径却变成了：“你们和诈骗人是一伙的，你们是诈骗团伙。”对于明确属于独立第三方的资金以及第三方投资人的自述与申诉，纽约南区法院选择公开漠视。</p>
+                    <p><strong>这是一场披着法律外衣、旷日持久的“司法超限战”！</strong> 中国共产党打击头号政敌的政治目标，正通过其在美国的某些利益代理人与官僚力量继续推进。在这场史无前例的中美政治与司法博弈中，数万名无辜的中国普通投资者被强行裹挟其中。作为深度参与2020年相关事件的群体，新中国联邦人遭遇的这起案件，其“政治迫害”的本质昭然若揭。美国政府试图用普通的“经济诈骗案”来掩盖政治动机，但其所谓的“受害人定义”和“受害资金逻辑”在事实面前完全经不起推敲。</p>
+                    <p>回归普通人的视角，我们这群中国金融难民，与那些普通的“J6（国会山事件）美国人”一样，正在失去原本平静的生活，失去程序正义。如果这一批普通中国人的合法资产得不到美国法律的保护，那么未来，每一个美国普通人的钱袋子也将岌岌可危！美国的私有财产神圣不可侵犯之基石，正遭到现代官僚体制的严重践踏。</p>
+                    <p>美国第45任总统唐纳德·特朗普（Donald Trump）曾深情讲过250年前华工的故事：<strong>“华工帮助铺设了连接我们大西洋海岸与太平洋海岸的铁路轨道。”</strong> 华工是美国建国与崛起过程中最朴实、最伟大的建设者。而今天，我们几万名金融难民，正在用血泪的代价触碰并见证着美国司法系统深处的漏洞。我们无意破坏这个国家，而是希望和善良的美国人民站在一起，共同清除司法体制中的傲慢、官僚与黑暗！</p>
+                    
+                    <p>为此，我们向全体投资者及正义人士发出如下<strong>核心倡议</strong>：</p>
+                    <hr>
+                    
+                    <h3>一、 动员真实受害人：从“被动等待”走向“主动捍卫”</h3>
+                    <p>不要再寄希望于官僚机器的自我觉醒，沉默只会被视为默认。我们号召所有将血汗钱投入G系列项目的真实投资者，立刻站出来！通过合法的法律申诉、公开声明和联合行动，向法庭、向公众、向媒体大声证明：<strong>我们不是诈骗犯，我们是独立的第三方资产所有者，那是我们经得起历史检验的血汗钱！</strong></p>
+                    
+                    <h3>二、 联合法学院组建“模拟法院”：用常识与法律精神审判不公</h3>
+                    <p>我们倡议参与G系列项目的普通人，广泛联系和寻找美国及全球各级的法学院与法律学者。我们将基于现有的<strong>公开材料和法庭文件</strong>（如南区法院的相关诉讼记录），在学术与社会层面组建“模拟法院”（Moot Court）。</p>
+                    <ul>
+                        <li><strong>核心议题：</strong> 基于美国司法的常识和真正的宪法精神，本案应该迎来什么样的公正结果？</li>
+                        <li><strong>社会拷问：</strong> 这群普通中国人，究竟能不能拿到他们的血汗钱？如何通过合法的法律框架，拿回属于这群金融难民的资产？</li>
+                    </ul>
+                    <p>我们要让全美最优秀的法律头脑看清，这场审判是如何背离了美国的立国精神。</p>
+                    
+                    <hr>
+                    <h3>同胞们，朋友们！</h3>
+                    <p>250年前，华工用汗水和生命连接了美国的两大洋；今天，我们用理性和坚韧捍卫现代文明的财产法治。这不仅仅是为了抢救我们自己的养老钱、子女教育金，更是为了捍卫所有人——包括美国人自己在内——免受官僚公权力非法剥夺的最终权利。</p>
+                    <p>如果你也是真实的受害人，请不再妥协，不再恐惧，立刻加入我们的行列，向傲慢与黑暗宣战，夺回属于我们的正义与资产！</p>
+                    <p><strong>捍卫合法权益，绝不退缩！</strong></p>
+                    
+                    <div class="signature">
+                        G系列项目普通投资者法律自救与正义联盟<br>
+                        2026年6月
                     </div>
-                    <p>250年前，华工是美国建国与崛起过程中最朴实、最伟大的建设者。今天，我们几万名投资者正在见证现代司法系统深处的运作。我们希望和善良的美国人民站在一起，共同维护司法体制的纯洁与公正。</p>
-                    
-                    <h3>我们的核心倡议：</h3>
-                    <h4>一、 动员真实受害人：从“被动等待”走向“主动捍卫”</h4>
-                    <p>我们号召所有真实的投资者站出来。通过合法的申诉、公开声明和联合行动，向法庭、向公众大声证明：我们是独立的第三方资产所有者，这是我们合法的财产。</p>
-                    
-                    <h4>二、 联合法学院组建“模拟法院” (Moot Court)</h4>
-                    <p>我们倡议广泛联系全球各级法学院与法律学者。基于现有的公开材料和法庭文件，在学术层面组建“模拟法院”。我们要探讨：基于美国司法的常识和宪法精神，如何通过合法的法律框架，拿回属于普通人的资产？</p>
                 `,
-                ctaButton: "加入模拟法院行动",
-                footerText: "© 2026 投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。"
+                ctaButton: "加入我们的行列，向傲慢与黑暗宣战",
+                footerText: "© 2026 G系列项目普通投资者法律自救与正义联盟. 捍卫合法权益，绝不退缩。"
             },
             en: {
                 navTitle: "Justice Alliance",
-                heroTitle: "Defending Property Rights & Judicial Justice",
-                heroSubtitle: "An Open Appeal to All Investors and Those Who Refuse to Stay Silent",
+                heroTitle: "Defending Hard-Earned Money & Judicial Justice",
+                heroSubtitle: "An Open Appeal to All Investors of the 'G-Series Projects'",
                 content: `
-                    <h3>To all investors in distress who refuse to remain silent:</h3>
-                    <p>Today, we are facing an unprecedented predicament and a judicial crisis. Tens of thousands of ordinary people, seeking asset security, invested their life savings into Western markets.</p>
-                    <p>However, armed with trust in the American rule of law and free markets, many have faced the seizure and forfeiture of their assets. Faced with funds that clearly belong to independent third parties and the affidavits of investors, the judicial process has appeared slow and indifferent. Tens of thousands of innocent, ordinary investors have been forcibly swept up, severely impacting their peaceful lives and procedural justice.</p>
-                    <div class="quote">
-                        "Chinese workers helped lay the railroad tracks that connected our Atlantic coast to the Pacific."<br>
-                        — Former President Donald Trump
+                    <h3>To all Chinese financial refugees and investors in distress who refuse to remain silent:</h3>
+                    <p>Today, we are facing an unprecedented "double strangulation" and a judicial crisis.</p>
+                    <p>At home, we are labeled as "endangering national security" and "funding foreign hostile forces." We are restricted, intimidated, and forbidden from trusting the West or investing in the United States. Tens of thousands of ordinary Chinese people, to seek asset security and overcoming immense difficulties, invested the hard-earned money they accumulated over a lifetime of hard work into the West.</p>
+                    <p>However, filled with trust in the American rule of law and free markets, what we received in return was the seizure and forfeiture of our assets by the U.S. government. Initially, the government proclaimed: "You were deceived, you are victims, and we will temporarily hold the funds for you." But subsequently, the narrative shifted to: "You are accomplices of the fraudsters; you are a fraud syndicate." The U.S. District Court for the Southern District of New York has chosen to publicly ignore funds that clearly belong to independent third parties, as well as the affidavits and appeals of third-party investors.</p>
+                    <p><strong>This is a protracted "unrestricted legal warfare" cloaked in the guise of law!</strong> The political objective of the Chinese Communist Party to eliminate its top political opponent is being advanced through certain interest proxies and bureaucratic forces within the U.S. In this unprecedented Sino-U.S. political and judicial struggle, tens of thousands of innocent, ordinary Chinese investors have been forcibly swept up. As a group deeply involved in the events of 2020, the case encountered by the people of the New Federal State of China clearly reveals its nature of "political persecution." The U.S. government attempts to use a standard "economic fraud case" to cover its political motives, but its "definition of victims" and "logic of victimized funds" completely collapse in the face of facts.</p>
+                    <p>Returning to the perspective of ordinary people, we, this group of Chinese financial refugees, just like those ordinary "J6 Americans," are losing our peaceful lives and procedural justice. If the lawful assets of this group of ordinary Chinese cannot be protected by U.S. law, then in the future, the wallets of every ordinary American will also be in peril! The foundation of the sacred inviolability of private property in the U.S. is being severely trampled by the modern bureaucracy.</p>
+                    <p>The 45th President of the United States, Donald Trump, once spoke deeply about the story of Chinese workers 250 years ago: <strong>"Chinese workers helped lay the railroad tracks that connected our Atlantic coast to the Pacific."</strong> Chinese workers were the most humble and greatest builders in the founding and rise of the United States. Today, tens of thousands of us financial refugees are touching and witnessing the deep-seated loopholes of the U.S. judicial system at the cost of blood and tears. We have no intention of destroying this country; rather, we hope to stand with the kind-hearted American people to jointly root out the arrogance, bureaucracy, and darkness within the judicial system!</p>
+                    
+                    <p>To this end, we issue the following <strong>core initiatives</strong> to all investors and righteous individuals:</p>
+                    <hr>
+                    
+                    <h3>I. Mobilize Real Victims: From "Passive Waiting" to "Active Defense"</h3>
+                    <p>Stop hoping for the bureaucratic machine to awaken on its own; silence will only be seen as consent. We call on all genuine investors who put their hard-earned money into the G-series projects to step forward immediately! Through lawful legal appeals, public statements, and joint actions, prove loudly to the court, the public, and the media: <strong>We are not fraudsters; we are independent third-party asset owners, and that is our hard-earned money that can stand the test of history!</strong></p>
+                    
+                    <h3>II. Collaborate with Law Schools to Form a "Moot Court": Judging Injustice with Common Sense and Legal Spirit</h3>
+                    <p>We advocate that ordinary people involved in the G-series projects extensively contact and seek out law schools and legal scholars across the U.S. and globally. Based on existing <strong>public materials and court documents</strong> (such as the litigation records of the Southern District Court), we will form a "Moot Court" on academic and social levels.</p>
+                    <ul>
+                        <li><strong>Core Issue:</strong> Based on the common sense of American jurisprudence and the true spirit of the Constitution, what just outcome should this case receive?</li>
+                        <li><strong>Social Inquiry:</strong> Can this group of ordinary Chinese people ultimately get their hard-earned money back? How can the assets belonging to these financial refugees be recovered through a lawful legal framework?</li>
+                    </ul>
+                    <p>We want the finest legal minds in America to see exactly how this trial has deviated from the founding spirit of the United States.</p>
+                    
+                    <hr>
+                    <h3>Fellow Compatriots, Friends!</h3>
+                    <p>250 years ago, Chinese workers used their sweat and lives to connect the two great oceans of America; today, we use reason and resilience to defend the property rule of law of modern civilization. This is not just to rescue our own retirement funds and our children's education funds, but to defend the ultimate right of everyone—including Americans themselves—to be free from the illegal deprivation by bureaucratic public power.</p>
+                    <p>If you are also a real victim, please compromise no more, fear no more, and join our ranks immediately to declare war on arrogance and darkness, and reclaim our justice and assets!</p>
+                    <p><strong>Defend lawful rights, never retreat!</strong></p>
+                    
+                    <div class="signature">
+                        G-Series Projects Ordinary Investors Legal Defense & Justice Alliance<br>
+                        June 2026
                     </div>
-                    <p>250 years ago, Chinese workers were among the most humble and greatest builders of the United States. Today, tens of thousands of investors are witnessing the inner workings of the modern justice system. We hope to stand with the good American people to jointly safeguard the purity and fairness of the judicial system.</p>
-                    
-                    <h3>Our Core Initiatives:</h3>
-                    <h4>1. Mobilizing Real Victims: From "Passive Waiting" to "Active Defense"</h4>
-                    <p>We call on all genuine investors to step forward. Through lawful appeals, public statements, and joint actions, we must prove to the courts and the public loudly and clearly: We are independent third-party asset owners, and this is our lawful property.</p>
-                    
-                    <h4>2. Collaborating with Law Schools to Form a "Moot Court"</h4>
-                    <p>We propose reaching out to law schools and legal scholars worldwide. Based on existing public materials and court documents, we aim to establish an academic "Moot Court." We will explore: Based on the common sense of American jurisprudence and the spirit of the Constitution, how can we recover the assets belonging to ordinary people through a lawful legal framework?</p>
                 `,
-                ctaButton: "Join the Moot Court Initiative",
-                footerText: "© 2026 Investors Legal Defense & Justice Alliance. Defending lawful rights without retreat."
+                ctaButton: "Join our ranks and declare war on arrogance and darkness",
+                footerText: "© 2026 G-Series Projects Ordinary Investors Legal Defense & Justice Alliance. Defend lawful rights, never retreat."
             },
             pt: {
                 navTitle: "Aliança por Justiça",
-                heroTitle: "Defendendo Direitos de Propriedade e Justiça Judicial",
+                heroTitle: "Defendendo Dinheiro Suado e Justiça Judicial",
                 heroSubtitle: "Um Apelo Aberto a Todos os Investidores",
-                content: `<h3>Tradução em andamento...</h3><p>O conteúdo em português estará disponível em breve. Por favor, consulte a versão em inglês ou chinês.</p>`,
-                ctaButton: "Junte-se à Iniciativa",
+                content: `<h3 style="text-align:center; padding: 50px 0; color: #888;">[A tradução para o português será atualizada em breve / Portuguese translation will be updated soon]</h3>`,
+                ctaButton: "Junte-se a nós",
                 footerText: "© 2026 Aliança por Justiça."
             },
             ja: {
                 navTitle: "正義同盟",
-                heroTitle: "財産権と司法の正義を守る",
+                heroTitle: "血税と司法の正義を守る",
                 heroSubtitle: "すべての投資家への公開アピール",
-                content: `<h3>翻訳中...</h3><p>日本語のコンテンツはまもなく公開されます。英語または中国語版をご覧ください。</p>`,
-                ctaButton: "模擬法廷イニシアチブに参加する",
-                footerText: "© 2026 投資家法的防衛と正義の同盟."
+                content: `<h3 style="text-align:center; padding: 50px 0; color: #888;">[日本語の翻訳は間もなく更新されます / Japanese translation will be updated soon]</h3>`,
+                ctaButton: "私たちの仲間になる",
+                footerText: "© 2026 正義同盟."
             },
             de: {
                 navTitle: "Allianz für Gerechtigkeit",
-                heroTitle: "Verteidigung von Eigentumsrechten",
+                heroTitle: "Verteidigung von hart verdientem Geld und Justiz",
                 heroSubtitle: "Ein offener Appell an alle Investoren",
-                content: `<h3>Übersetzung in Arbeit...</h3><p>Der deutsche Inhalt wird in Kürze verfügbar sein.</p>`,
-                ctaButton: "Treten Sie der Initiative bei",
+                content: `<h3 style="text-align:center; padding: 50px 0; color: #888;">[Die deutsche Übersetzung wird in Kürze aktualisiert / German translation will be updated soon]</h3>`,
+                ctaButton: "Schließen Sie sich uns an",
                 footerText: "© 2026 Allianz für Gerechtigkeit."
             },
             fr: {
                 navTitle: "Alliance pour la Justice",
-                heroTitle: "Défense des Droits de Propriété",
+                heroTitle: "Défense de l'argent durement gagné et de la justice",
                 heroSubtitle: "Un Appel Ouvert à Tous les Investisseurs",
-                content: `<h3>Traduction en cours...</h3><p>Le contenu en français sera bientôt disponible.</p>`,
-                ctaButton: "Rejoindre l'Initiative",
+                content: `<h3 style="text-align:center; padding: 50px 0; color: #888;">[La traduction française sera bientôt mise à jour / French translation will be updated soon]</h3>`,
+                ctaButton: "Rejoignez-nous",
                 footerText: "© 2026 Alliance pour la Justice."
             }
         };
@@ -276,7 +343,7 @@
             const data = translations[lang];
 
             // 更新DOM元素
-            document.title = data.heroTitle;
+            document.title = data.heroTitle + " | Justice & Rule of Law Advocacy";
             document.getElementById("nav-title").innerText = data.navTitle;
             document.getElementById("hero-title").innerText = data.heroTitle;
             document.getElementById("hero-subtitle").innerText = data.heroSubtitle;
@@ -285,7 +352,7 @@
             document.getElementById("footer-text").innerText = data.footerText;
         }
 
-        // 页面加载时初始化默认语言（中文）
+        // 页面加载时初始化
         window.onload = function() {
             changeLanguage();
         };
